@@ -1,10 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
 
+import { Routes, Route } from "react-router-dom";
+import Error from "./views/Error";
+import Dashboard from "./views/Dashboard";
+
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <h1>Portfolio 1</h1>
+      <br/> */}
+      <Routes>
+      <Route path="/" element={<Dashboard />}/>
+      <Route path="*" element={<Error />}/>
+      </Routes>
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +28,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
