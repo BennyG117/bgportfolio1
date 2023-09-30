@@ -38,6 +38,8 @@
   text-align: center;
 } */
 
+/* ------------- RESET AND BODY EFFECTS -------------  */
+
 * {
   margin: 0;
   padding: 0;
@@ -49,11 +51,12 @@
 body {
   background: #3B6064;
   color: #FFFEF7;
-  /* color: #DAD7CD; */
   /* color: #f1efe3; */
 
 }
 
+/* ------------- NAV BAR AND TOP OF PAGE -------------  */
+/* header for top of page */
 #header {
   width: 100%;
   height: 100vh;
@@ -62,10 +65,85 @@ body {
   background-position: center;
 }
 
+/* container */
+.container {
+  padding: 10px 10%;
+}
 
+/* Nav */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
+/*! Logo in Nav Bar- Will require update to replace h1 tag*/
+.logo {
+  width: 140px;
 
+}
 
+/* nav & list */
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
 
+/* nav ul li a - adjusted font color for group */
+nav ul li a {
+  color: #F4FFF5;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
 
+/* AFTER effect */
+nav ul li a::after {
+  content: '';
+  /* width: 100%; */
+  width: 0;
+  height: 3px;
+  background: #3B6064;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
 
+/* Reaction effect */
+nav ul li a:hover::after {
+  width: 100%;
+
+}
+
+/* Header text and page titles */
+.header-text {
+  margin-top: 20%;
+  font-size: 30px;
+}
+
+/* header text and h1 */
+.header-text h1 {
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+/* with span  */
+.header-text h1 span {
+  color: #eec0a7;
+}
+
+/* ------------- ABOUT ME SECTION -------------  */
+
+#about {
+  padding: 80px 0;
+  color: #FFFEF7;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
